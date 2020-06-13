@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<document type="BLUMIND" editor_version="3.17.621.0" document_version="3.0.0.0">
+  <!--Create by Blumind, you can download it free from http://www.blumind.org-->
+  <information>
+    <author>cj</author>
+    <company>
+    </company>
+    <version>3.0</version>
+    <description>
+    </description>
+  </information>
+  <attributes>
+    <item name="editor_show_sidebar">True</item>
+  </attributes>
+  <charts active_chart="0">
+    <chart name="新页面 1" type="MindMap">
+      <remark>
+      </remark>
+      <layout>MIND_MAP</layout>
+      <style>
+        <back_color>White</back_color>
+        <fore_color>Black</fore_color>
+        <line_color>LightSlateGray</line_color>
+        <border_color>SlateGray</border_color>
+        <node_back_color>LightGray</node_back_color>
+        <node_fore_color>Black</node_fore_color>
+        <select_color>RoyalBlue</select_color>
+        <hover_color>MediumSlateBlue</hover_color>
+        <link_line_color>Green</link_line_color>
+        <widget_margin>1</widget_margin>
+        <picture_thumb_size>100, 100</picture_thumb_size>
+      </style>
+      <nodes>
+        <node id="1" text="MainForm" x="188" y="377" width="89" height="41" text_b="12, 12, 65, 17">
+          <style>
+            <back_color>Silver</back_color>
+            <fore_color>Black</fore_color>
+            <border_color>Black</border_color>
+            <padding>12</padding>
+          </style>
+          <nodes>
+            <node id="2" text="子主题 2" x="52" y="387" width="56" height="21" text_b="2, 2, 52, 17" />
+            <node id="3" text="DocumentForm&#xD;&#xA;文档界面" x="357" y="379" width="101" height="36" text_b="2, 2, 97, 32" fold_btn_b="459, 391, 13, 13">
+              <nodes>
+                <node id="4" text="路线1：文档的内存组织 Document&#xD;&#xA;" x="538" y="372" width="205" height="21" text_b="2, 2, 201, 17" fold_btn_b="744, 376, 13, 13">
+                  <nodes>
+                    <node id="8" text="Name" x="823" y="325" width="44" height="21" text_b="2, 2, 40, 17" />
+                    <node id="9" text="FileName" x="823" y="356" width="64" height="21" text_b="2, 2, 60, 17" />
+                    <node id="10" text="XList&lt;ChartPage&gt; Charts;   所有的&quot;页面&quot;" x="823" y="387" width="244" height="21" text_b="2, 2, 240, 17" />
+                    <node id="5" text="ChartPage _ActiveChart;   当前活动的页面" x="823" y="418" width="248" height="21" text_b="2, 2, 244, 17" />
+                  </nodes>
+                  <lines>
+                    <line target="8" begin_side="Right" end_side="Left" begin_rect="538, 372, 218, 21" end_rect="823, 325, 44, 21" />
+                    <line target="9" begin_side="Right" end_side="Left" begin_rect="538, 372, 218, 21" end_rect="823, 356, 64, 21" />
+                    <line target="10" begin_side="Right" end_side="Left" begin_rect="538, 372, 218, 21" end_rect="823, 387, 244, 21" />
+                    <line target="5" begin_side="Right" end_side="Left" begin_rect="538, 372, 218, 21" end_rect="823, 418, 248, 21" />
+                  </lines>
+                </node>
+                <node id="6" text="路线2：文档的界面基类 继承自BaseDocumentForm&#xD;&#xA;" x="538" y="449" width="300" height="21" text_b="2, 2, 296, 17" fold_btn_b="839, 453, 13, 13">
+                  <nodes>
+                    <node id="7" text="继承自BaseForm" x="918" y="449" width="104" height="21" text_b="2, 2, 100, 17" />
+                  </nodes>
+                  <lines>
+                    <line target="7" begin_side="Right" end_side="Left" begin_rect="538, 449, 313, 21" end_rect="918, 449, 104, 21" />
+                  </lines>
+                </node>
+              </nodes>
+              <lines>
+                <line target="4" begin_side="Right" end_side="Left" begin_rect="357, 379, 114, 36" end_rect="538, 372, 205, 21" />
+                <line target="6" begin_side="Right" end_side="Left" begin_rect="357, 379, 114, 36" end_rect="538, 449, 300, 21" />
+              </lines>
+            </node>
+          </nodes>
+          <lines>
+            <line target="2" begin_side="Left" end_side="Right" begin_rect="188, 377, 89, 41" end_rect="52, 387, 56, 21" />
+            <line target="3" begin_side="Right" end_side="Left" begin_rect="188, 377, 89, 41" end_rect="357, 379, 101, 36" />
+          </lines>
+        </node>
+      </nodes>
+    </chart>
+  </charts>
+</document>
