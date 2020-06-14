@@ -31,7 +31,7 @@
         <picture_thumb_size>100, 100</picture_thumb_size>
       </style>
       <nodes>
-        <node id="1" text="MainForm：主界面三大元素&#xD;&#xA;1) 菜单、&#xD;&#xA;2) 顶层TaskBar对应文档标题栏&#xD;&#xA;3) 主界面的mdiworkspace,支持多chartpage" x="709" y="355" width="278" height="87" text_b="12, 12, 254, 63">
+        <node id="1" text="MainForm：主界面三大元素&#xD;&#xA;1) 菜单、&#xD;&#xA;2) 顶层TaskBar对应文档标题栏&#xD;&#xA;3) 主界面的mdiworkspace,支持多chartpage" x="1062" y="354" width="278" height="87" text_b="12, 12, 254, 63">
           <style>
             <back_color>Silver</back_color>
             <fore_color>Black</fore_color>
@@ -40,57 +40,70 @@
             <text_align>Left</text_align>
           </style>
           <nodes>
-            <node id="12" text="taskBar1：TaskBar;多文档栏&#xD;&#xA;相当于ModelTitlePanel" x="460" y="340" width="169" height="36" text_b="2, 2, 165, 32" />
-            <node id="2" text="mdiWorkSpace1：MDIWorkSpace；&#xD;&#xA;相当于CavansPanel，但是支持多chartpage" x="376" y="420" width="253" height="36" text_b="2, 2, 249, 32" fold_btn_b="362, 432, 13, 13">
+            <node id="12" text="taskBar1：TaskBar;多文档栏&#xD;&#xA;相当于ModelTitlePanel" x="813" y="316" width="169" height="36" text_b="2, 2, 165, 32" />
+            <node id="2" text="mdiWorkSpace1：MDIWorkSpace；&#xD;&#xA;相当于CavansPanel，但是支持多chartpage" x="729" y="419" width="253" height="36" text_b="2, 2, 249, 32" fold_btn_b="715, 431, 13, 13">
               <nodes>
-                <node id="13" text="问题:mdiworkspace和DocumentForm什么关系" x="20" y="428" width="276" height="21" text_b="2, 2, 272, 17" />
+                <node id="13" text="问题:mdiworkspace和DocumentForm什么关系?&#xD;&#xA;mdiworkspace只是一堆Form的容器，&#xD;&#xA;利用ActivedMdiForm和List&lt;Form&gt;提供多窗体界面之间的切换管理" x="263" y="411" width="386" height="52" text_b="2, 2, 382, 48" fold_btn_b="249, 431, 13, 13">
+                  <nodes>
+                    <node id="16" text="_ActivedMdiForm：Form" x="28" y="411" width="155" height="21" text_b="2, 2, 151, 17" />
+                    <node id="17" text="ActiveForms：List&lt;Form&gt;" x="20" y="442" width="163" height="21" text_b="2, 2, 159, 17" />
+                  </nodes>
+                  <lines>
+                    <line target="16" begin_side="Left" end_side="Right" begin_rect="250, 411, 399, 52" end_rect="28, 411, 155, 21" />
+                    <line target="17" begin_side="Left" end_side="Right" begin_rect="250, 411, 399, 52" end_rect="20, 442, 163, 21" />
+                  </lines>
+                </node>
               </nodes>
               <lines>
-                <line target="13" begin_side="Left" end_side="Right" begin_rect="363, 420, 266, 36" end_rect="20, 428, 276, 21" />
+                <line target="13" begin_side="Left" end_side="Right" begin_rect="716, 419, 266, 36" end_rect="263, 411, 386, 52" />
               </lines>
             </node>
-            <node id="3" text="DocumentForm&#xD;&#xA;文档界面" x="1067" y="380" width="101" height="36" text_b="2, 2, 97, 32" fold_btn_b="1169, 392, 13, 13">
+            <node id="3" text="DocumentForm&#xD;&#xA;文档界面,&#xD;&#xA;本质上是个Form" x="1420" y="371" width="101" height="52" text_b="2, 2, 97, 48" fold_btn_b="1522, 391, 13, 13">
               <nodes>
-                <node id="4" text="路线1：文档的内存组织 Document&#xD;&#xA;" x="1248" y="372" width="205" height="21" text_b="2, 2, 201, 17" fold_btn_b="1454, 376, 13, 13">
+                <node id="18" text="multiChartsView1:ChartPageView.MultiChartsView" x="1601" y="279" width="305" height="21" text_b="2, 2, 301, 17" />
+                <node id="4" text="路线1：文档的内存组织 Document&#xD;&#xA;" x="1601" y="387" width="205" height="21" text_b="2, 2, 201, 17" fold_btn_b="1807, 391, 13, 13">
                   <nodes>
-                    <node id="8" text="Name;文档名" x="1533" y="295" width="84" height="21" text_b="2, 2, 80, 17" />
-                    <node id="9" text="FileName;文档路径" x="1533" y="326" width="117" height="21" text_b="2, 2, 113, 17" />
-                    <node id="10" text="XList&lt;ChartPage&gt; Charts;   所有的&quot;页面&quot;" x="1533" y="357" width="244" height="21" text_b="2, 2, 240, 17" />
-                    <node id="5" text="ChartPage _ActiveChart;   当前活动的页面" x="1533" y="419" width="248" height="21" text_b="2, 2, 244, 17" fold_btn_b="1782, 423, 13, 13">
+                    <node id="8" text="Name;文档名" x="1886" y="310" width="84" height="21" text_b="2, 2, 80, 17" />
+                    <node id="9" text="FileName;文档路径" x="1886" y="341" width="117" height="21" text_b="2, 2, 113, 17" />
+                    <node id="10" text="XList&lt;ChartPage&gt; Charts;   所有的&quot;页面&quot;" x="1886" y="372" width="244" height="21" text_b="2, 2, 240, 17" />
+                    <node id="5" text="ChartPage _ActiveChart;   当前活动的页面" x="1886" y="434" width="248" height="21" text_b="2, 2, 244, 17" fold_btn_b="2135, 438, 13, 13">
                       <nodes>
-                        <node id="14" text="MindMap&#xD;&#xA;ChartPage的第一种实现" x="1861" y="388" width="144" height="36" text_b="2, 2, 140, 32" />
-                        <node id="15" text="FlowDiagram&#xD;&#xA;ChartPage的第二种实现" x="1861" y="434" width="144" height="36" text_b="2, 2, 140, 32" />
+                        <node id="14" text="MindMap&#xD;&#xA;ChartPage的第一种实现" x="2214" y="403" width="144" height="36" text_b="2, 2, 140, 32" />
+                        <node id="15" text="FlowDiagram&#xD;&#xA;ChartPage的第二种实现" x="2214" y="449" width="144" height="36" text_b="2, 2, 140, 32" />
                       </nodes>
                       <lines>
-                        <line target="14" begin_side="Right" end_side="Left" begin_rect="1533, 419, 261, 21" end_rect="1861, 388, 144, 36" />
-                        <line target="15" begin_side="Right" end_side="Left" begin_rect="1533, 419, 261, 21" end_rect="1861, 434, 144, 36" />
+                        <line target="14" begin_side="Right" end_side="Left" begin_rect="1886, 434, 261, 21" end_rect="2214, 403, 144, 36" />
+                        <line target="15" begin_side="Right" end_side="Left" begin_rect="1886, 434, 261, 21" end_rect="2214, 449, 144, 36" />
                       </lines>
                     </node>
                   </nodes>
                   <lines>
-                    <line target="8" begin_side="Right" end_side="Left" begin_rect="1248, 372, 218, 21" end_rect="1533, 295, 84, 21" />
-                    <line target="9" begin_side="Right" end_side="Left" begin_rect="1248, 372, 218, 21" end_rect="1533, 326, 117, 21" />
-                    <line target="10" begin_side="Right" end_side="Left" begin_rect="1248, 372, 218, 21" end_rect="1533, 357, 244, 21" />
-                    <line target="5" begin_side="Right" end_side="Left" begin_rect="1248, 372, 218, 21" end_rect="1533, 419, 248, 21" />
+                    <line target="8" begin_side="Right" end_side="Left" begin_rect="1601, 387, 218, 21" end_rect="1886, 310, 84, 21" />
+                    <line target="9" begin_side="Right" end_side="Left" begin_rect="1601, 387, 218, 21" end_rect="1886, 341, 117, 21" />
+                    <line target="10" begin_side="Right" end_side="Left" begin_rect="1601, 387, 218, 21" end_rect="1886, 372, 244, 21" />
+                    <line target="5" begin_side="Right" end_side="Left" begin_rect="1601, 387, 218, 21" end_rect="1886, 434, 248, 21" />
                   </lines>
                 </node>
-                <node id="6" text="路线2：文档的界面基类 继承自BaseDocumentForm&#xD;&#xA;" x="1248" y="480" width="300" height="21" folded="True" text_b="2, 2, 296, 17" fold_btn_b="1549, 484, 13, 13">
+                <node id="6" text="路线2：文档的界面基类 继承自BaseDocumentForm&#xD;&#xA;" x="1601" y="495" width="300" height="21" text_b="2, 2, 296, 17" fold_btn_b="1902, 499, 13, 13">
                   <nodes>
-                    <node id="7" text="继承自BaseForm" x="17778" y="10808" width="104" height="21" text_b="2, 2, 100, 17" />
+                    <node id="7" text="继承自BaseForm" x="1981" y="495" width="104" height="21" text_b="2, 2, 100, 17" />
                   </nodes>
-                  <lines />
+                  <lines>
+                    <line target="7" begin_side="Right" end_side="Left" begin_rect="1601, 495, 313, 21" end_rect="1981, 495, 104, 21" />
+                  </lines>
                 </node>
               </nodes>
               <lines>
-                <line target="4" begin_side="Right" end_side="Left" begin_rect="1067, 380, 114, 36" end_rect="1248, 372, 205, 21" />
-                <line target="6" begin_side="Right" end_side="Left" begin_rect="1067, 380, 114, 36" end_rect="1248, 480, 300, 21" />
+                <line target="18" begin_side="Right" end_side="Left" begin_rect="1420, 371, 114, 52" end_rect="1601, 279, 305, 21" />
+                <line target="4" begin_side="Right" end_side="Left" begin_rect="1420, 371, 114, 52" end_rect="1601, 387, 205, 21" />
+                <line target="6" begin_side="Right" end_side="Left" begin_rect="1420, 371, 114, 52" end_rect="1601, 495, 300, 21" />
               </lines>
             </node>
           </nodes>
           <lines>
-            <line target="12" begin_side="Left" end_side="Right" begin_rect="709, 355, 278, 87" end_rect="460, 340, 169, 36" />
-            <line target="2" begin_side="Left" end_side="Right" begin_rect="709, 355, 278, 87" end_rect="376, 420, 253, 36" />
-            <line target="3" begin_side="Right" end_side="Left" begin_rect="709, 355, 278, 87" end_rect="1067, 380, 101, 36" />
+            <line target="12" begin_side="Left" end_side="Right" begin_rect="1062, 354, 278, 87" end_rect="813, 316, 169, 36" />
+            <line target="2" begin_side="Left" end_side="Right" begin_rect="1062, 354, 278, 87" end_rect="729, 419, 253, 36" />
+            <line target="3" begin_side="Right" end_side="Left" begin_rect="1062, 354, 278, 87" end_rect="1420, 371, 101, 52" />
           </lines>
         </node>
       </nodes>
