@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Blumind.Controls
 {
-    class TabItem
+    public class TabItem
     {
         bool _CanClose = false;
         string _Text = string.Empty;

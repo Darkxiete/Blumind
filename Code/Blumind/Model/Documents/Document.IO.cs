@@ -8,7 +8,7 @@ using Blumind.Model.MindMaps;
 
 namespace Blumind.Model.Documents
 {
-    partial class Document
+    public partial class Document
     {
         string _FileName;
         string _Name;

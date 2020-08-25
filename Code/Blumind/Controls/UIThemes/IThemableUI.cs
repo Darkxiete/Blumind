@@ -3,7 +3,7 @@ using Blumind.Controls;
 
 namespace Blumind.Controls
 {
-    interface IThemableUI
+    public interface IThemableUI
     {
         void ApplyTheme(UITheme theme);
     }

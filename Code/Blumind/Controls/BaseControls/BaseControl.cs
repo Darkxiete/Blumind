@@ -7,7 +7,7 @@ using Blumind.Model;
 
 namespace Blumind.Controls
 {
-    class BaseControl : Control, IThemableUI
+    public class BaseControl : Control, IThemableUI
     {
         bool UIThemeInited;
 

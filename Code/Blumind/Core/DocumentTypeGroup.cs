@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Blumind.Core
 {
-    class DocumentTypeGroup
+    public class DocumentTypeGroup
     {
         DocumentType[] _Types;
         string _Name;

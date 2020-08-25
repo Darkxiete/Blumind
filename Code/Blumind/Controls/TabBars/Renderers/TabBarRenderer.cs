@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace Blumind.Controls
 {
-    abstract class TabBarRenderer
+    public abstract class TabBarRenderer
     {
         public TabBarRenderer(TabBar bar)
         {

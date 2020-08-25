@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Blumind.Controls
 {
-    class TabBarButton
+    public class TabBarButton
     {
         TabBar _Owner;
         string _Text;

@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace Blumind.Controls
 {
-    class UITheme
+    public class UITheme
     {
         UIColorTheme _Colors = UIColorThemeManage.Default;
         ToolStripRenderer _ToolStripRenderer = DefaultToolStripRenderer.Default;

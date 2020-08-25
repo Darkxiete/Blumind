@@ -12,7 +12,7 @@ using Blumind.Model.Documents;
 
 namespace Blumind.Model
 {
-    abstract class ChartObject : Blumind.Core.INotifyPropertyChanged, IRemark, Blumind.Model.ISerializable//, IComponent
+    public abstract class ChartObject : Blumind.Core.INotifyPropertyChanged, IRemark, Blumind.Model.ISerializable//, IComponent
     {
         ChartPage _Chart;
         string _Text;

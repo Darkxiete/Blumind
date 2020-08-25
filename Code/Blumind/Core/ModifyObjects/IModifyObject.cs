@@ -13,7 +13,7 @@ namespace Blumind.Core
         bool Modified { get; set; }
     }
 
-    class ModifyObject : IModifyObject
+    public class ModifyObject : IModifyObject
     {
         bool _Modified;
         int ModifySuspendCount;

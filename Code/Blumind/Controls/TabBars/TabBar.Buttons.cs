@@ -8,7 +8,7 @@ using Blumind.Core;
 
 namespace Blumind.Controls
 {
-    partial class TabBar
+    public partial class TabBar
     {
         //const int _ButtonSpace = 4;
         //private const int _ButtonSize = 22;

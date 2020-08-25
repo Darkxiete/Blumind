@@ -12,7 +12,7 @@ using Blumind.Globalization;
 
 namespace Blumind.Model.Documents
 {
-    partial class Document : ModifyObject
+    public partial class Document : ModifyObject
     {
         string _Author;
         string _Company;

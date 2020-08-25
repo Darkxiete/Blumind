@@ -12,7 +12,7 @@ using Blumind.Globalization;
 namespace Blumind.Controls
 {
     [DefaultEvent("SelectedItemChanged")]
-    partial class TabBar : BaseControl
+    public partial class TabBar : BaseControl
     {
         public event TabItemEventHandler ItemClose;
         public event TabItemCancelEventHandler ItemClosing;

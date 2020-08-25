@@ -6,7 +6,7 @@ using Blumind.Core;
 
 namespace Blumind.Controls
 {
-    class UIColorTheme
+    public class UIColorTheme
     {
         const string FileType = "blumind-ui-theme";
 
