@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Blumind.Controls
 {
-    class ToolStripPro : ToolStrip
+    public class ToolStripPro : ToolStrip
     {
         public ToolStripPro()
         {
