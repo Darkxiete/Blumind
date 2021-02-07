@@ -54,7 +54,7 @@ namespace Blumind.Controls.MapViews
             if (map == null)
                 throw new ArgumentNullException();
 
-            ResetObjects(args.Graphics, map);
+            ResetObjects(args.Graphics, map);  // 设置Pen和Brush
 
             //PaintBackground(map, args);
 
@@ -641,18 +641,18 @@ namespace Blumind.Controls.MapViews
             var layout = link.LayoutData;
             Color color = link.Color.IsEmpty ? e.Chart.LinkLineColor : link.Color;
             var pen = e.Graphics.Pen(color, link.LineWidth, link.LineStyle);
-            e.Graphics.DrawBezier(pen, layout.StartPoint, layout.ControlPoint1, layout.ControlPoint2, layout.EndPoint,
+            e.Graphics.DrawBezier(pen, layout.StartPoint, layout.ControlPoint1, layout.ControlPoint2, layout.EndPoint,                // 划线 link.EndCap表示一个箭头
                 link.StartCap, link.EndCap);
 
             //text
             if (!string.IsNullOrEmpty(link.Text))
             {
-                var pt = BezierHelper.GetPoint(layout.StartPoint, layout.ControlPoint1, layout.ControlPoint2, layout.EndPoint, 0.5f);
+                var pt = BezierHelper.GetPoint(layout.StartPoint, layout.ControlPoint1, layout.ControlPoint2, layout.EndPoint, 0.5f); // Bezier曲线的轨迹，0.5表示在整条曲线的中点
                 var size = Size.Ceiling(e.Graphics.MeasureString(link.Text, e.Font));
                 var rectText = new Rectangle(pt.X - size.Width / 2, pt.Y - size.Height / 2, size.Width, size.Height);
 
                 if (!e.Chart.BackColor.IsEmpty)
-                    e.Graphics.FillRectangle(e.Graphics.SolidBrush(Color.FromArgb(180, e.Chart.BackColor)), rectText);
+                    e.Graphics.FillRectangle(e.Graphics.SolidBrush(Color.FromArgb(180, e.Chart.BackColor)), rectText);                // 画文本框
                 
                 if (!e.Chart.ForeColor.IsEmpty)
                 {
@@ -661,7 +661,7 @@ namespace Blumind.Controls.MapViews
                         font2 = e.Graphics.Font(e.Font, e.Font.Style | FontStyle.Underline);
 
                     var sf = PaintHelper.SFCenter;
-                    e.Graphics.DrawString(link.Text, font2, e.Graphics.SolidBrush(e.Chart.ForeColor), rectText, sf);
+                    e.Graphics.DrawString(link.Text, font2, e.Graphics.SolidBrush(e.Chart.ForeColor), rectText, sf);                 // 把字写上去
                 }
 
                 link.LayoutData.TextBounds = rectText;
@@ -677,7 +677,7 @@ namespace Blumind.Controls.MapViews
                 Image iconRemark = Properties.Resources.note_small;
                 Point pt = BezierHelper.GetPoint(layout.StartPoint, layout.ControlPoint1, layout.ControlPoint2, layout.EndPoint, 0.5f);
                 Rectangle rectRemark = new Rectangle(pt.X - iconRemark.Width / 2, pt.Y - iconRemark.Height / 2, iconRemark.Width, iconRemark.Height);
-                e.Graphics.DrawImage(iconRemark, rectRemark, 0, 0, iconRemark.Width, iconRemark.Height);
+                e.Graphics.DrawImage(iconRemark, rectRemark, 0, 0, iconRemark.Width, iconRemark.Height);                           // 画icon 
             }
         }
 

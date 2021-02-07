@@ -170,7 +170,8 @@ namespace Blumind.Model.Documents
                     DocumentType.Tiff,}),
                 new DocumentTypeGroup("XML", new DocumentType[]{
                     DocumentType.Svg,
-                    DocumentType.FreeMind}),
+                    DocumentType.FreeMind,
+                    DocumentType.Xmind}),
                 new DocumentTypeGroup("Text", new DocumentType[]{
                     DocumentType.Txt,
                     DocumentType.Csv}),

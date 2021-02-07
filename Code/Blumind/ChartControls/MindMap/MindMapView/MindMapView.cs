@@ -419,6 +419,9 @@ namespace Blumind.Controls.MapViews
             }
         }
 
+        /// <summary>
+        /// TODO 干嘛用的啊？
+        /// </summary>
         private void LayoutView()
         {
             if (Map == null)
@@ -482,6 +485,10 @@ namespace Blumind.Controls.MapViews
             }
         }
 
+        /// <summary>
+        /// 干嘛的？
+        /// </summary>
+        /// <param name="ut"></param>
         public override void UpdateView(ChangeTypes ut)
         {
             CancelEdit();

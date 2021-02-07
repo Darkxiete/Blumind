@@ -248,6 +248,7 @@ namespace Blumind.Controls
 
         protected override void OnPaint(PaintEventArgs e)
         {
+            // TODO 重绘的地方
             //base.OnPaint(e);
             e.Graphics.Clear(BackColor);
 

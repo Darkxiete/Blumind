@@ -12,6 +12,12 @@ namespace Blumind.Controls.MapViews
         private ChartObject[] MapObjects;
         private bool Recursive;
 
+        /// <summary>
+        /// 其实是有地方不用递归拷贝的
+        ///     MindMapView.Command.Copy
+        /// </summary>
+        /// <param name="objects"></param>
+        /// <param name="recursive"></param>
         public CopyCommand(ChartObject[] objects, bool recursive)
         {
             MapObjects = objects;

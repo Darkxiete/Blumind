@@ -268,6 +268,7 @@
     <Compile Include="Core\DotNet3\Func.cs" />
     <Compile Include="Core\DotNet3\Linq.cs" />
     <Compile Include="Core\DotNet3\ListExtensions.cs" />
+    <Compile Include="Core\Exports\XmindEngine.cs" />
     <Compile Include="Core\Win32Apis\OSHelper.cs" />
     <Compile Include="Design\FillTypeEditor.cs" />
     <Compile Include="Design\HorizontalAlignmentEditor.cs" />
@@ -481,6 +482,7 @@
     <Compile Include="Model\IExtendActionProvider.cs" />
     <Compile Include="Model\IRemark.cs" />
     <Compile Include="Model\ISerializable.cs" />
+    <Compile Include="Model\MindMaps\XmindFile.cs" />
     <Compile Include="Model\PageOrientation.cs" />
     <Compile Include="Core\Delegates\ChartObjectPropertyEventArgs.cs" />
     <Compile Include="Model\Styles\ChartStyle.cs" />

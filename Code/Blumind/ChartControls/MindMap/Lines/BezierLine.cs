@@ -107,7 +107,7 @@ namespace Blumind.ChartControls.MindMap.Lines
             Vector4 vector, Vector4 vectorTo)
         {
             var fcp = PaintHelper.CenterPoint(rectFrom);
-            int bezierTurn;
+            int bezierTurn; // 两个控制点之间的间距
 
             Point[] pts = new Point[4];
             switch (vector)

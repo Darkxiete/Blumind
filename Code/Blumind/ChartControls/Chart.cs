@@ -572,6 +572,7 @@ namespace Blumind.Controls
 
         void ChartBox_Paint(object sender, PaintEventArgs e)
         {
+            Console.WriteLine("重绘, 区域大小：" + e.ClipRectangle.Size.ToString());
             Point pt = Point.Empty;
             if (HorizontalScroll.Enabled)
                 pt.X = HorizontalScroll.Value;
@@ -614,15 +615,21 @@ namespace Blumind.Controls
                 if (HighQualityRender)
                     PaintHelper.SetHighQualityRender(cpe.Graphics);
 
+                cpe.Graphics.Clear(ChartBackColor);
+                cpe.Graphics.FillEllipse(Brushes.Green, new Rectangle(new Point((int)(5 / Zoom), (int)(5 / Zoom)), new Size((int)(15 / Zoom), (int)(15 / Zoom))));
                 if (!pt.IsEmpty)
                 {
                     cpe.Graphics.TranslateTransform(-pt.X, -pt.Y);
                     Rectangle rect = cpe.LogicViewPort;
                     rect.Offset(pt.X, pt.Y);
                     cpe.LogicViewPort = rect;
+                    Rectangle rectCopy = new Rectangle(new Point((int)(rect.Location.X / Zoom), (int)(rect.Location.Y / Zoom)), new Size((int)(rect.Width / Zoom), (int)(rect.Height / Zoom)));
+                    rectCopy.Inflate(-5, -5);
+                    cpe.Graphics.DrawRectangle(Pens.Gold, rectCopy);
                 }
 
                 // Draw Chart
+
                 DrawChart(cpe);
 
                 if (CustomDoubleBuffer)
@@ -633,6 +640,7 @@ namespace Blumind.Controls
 
             if (CustomDoubleBuffer && BmpBuffer != null)
             {
+                BmpBuffer.Save("bmpbuffer.png");
                 e.Graphics.DrawImage(BmpBuffer,
                     new Rectangle(0, 0, ChartBox.Width, ChartBox.Height),
                     0, 0, BmpBuffer.Width, BmpBuffer.Height, GraphicsUnit.Pixel);
@@ -649,7 +657,6 @@ namespace Blumind.Controls
             {
                 layer.DrawRealTime(e);
             }
-
             OnAfterPaint(e);
         }
 

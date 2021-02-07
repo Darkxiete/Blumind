@@ -104,6 +104,15 @@ namespace Blumind.Core.Documents
                 return new Topic(text);
         }
 
+        /// <summary>
+        /// 分层递归，BFS
+        /// </summary>
+        /// <param name="sb"> StringBuilder </param>
+        /// <param name="topic"> 当前待序列化的ChartObject </param>
+        /// <param name="level"> 当前层级（从第一个待序列化的ChartObject来算） </param>
+        /// <param name="recursive"> 是否使用递归 </param>
+        /// <param name="allObjects"> 所有被选择的ChartObject </param>
+        /// <param name="accessedObjects"> 已访问的ChartObject </param>
         void SerializeTopic(StringBuilder sb, Topic topic, int level, bool recursive, ChartObject[] allObjects, List<ChartObject> accessedObjects)
         {
             sb.Append('\t', level);

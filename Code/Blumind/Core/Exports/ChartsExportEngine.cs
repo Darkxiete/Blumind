@@ -74,7 +74,7 @@ namespace Blumind.Core.Exports
 
         public static ChartsExportEngine[] GetEngines()
         {
-            return new ChartsExportEngine[] { 
+            return new ChartsExportEngine[] {
                 new PngEngine(),
                 new JpegEngine(),
                 new BitmapEngine(),
@@ -84,6 +84,7 @@ namespace Blumind.Core.Exports
                 new TxtEngine(),
                 new CsvEngine(),
                 new FreeMindEngine(),
+                new XmindEngine(),
                 new PdfEngine(),
             };
         }

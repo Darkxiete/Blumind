@@ -43,12 +43,12 @@ namespace Blumind.Controls.MapViews
 
         protected override void DrawChart(ChartPaintEventArgs e)
         {
-            e.Graphics.Clear(ChartBackColor);
+            //e.Graphics.Clear(ChartBackColor);
 
             // transfter
-            Rectangle viewPort = ViewPort;
+            Rectangle viewPort = ViewPort; // 当前Chart的视野的大小
             Point ptTran = Point.Empty;
-            SizeF size = ContentSize;// new SizeF(ContentSize.Width * Zoom, ContentSize.Height * Zoom);
+            SizeF size = ContentSize;// TODO new SizeF(ContentSize.Width * Zoom, ContentSize.Height * Zoom);  ContentSize
             if (!HorizontalScroll.Enabled && viewPort.Width > ContentSize.Width)
             {
                 ptTran.X = (int)Math.Ceiling((viewPort.Width - size.Width) / 2);
@@ -57,7 +57,13 @@ namespace Blumind.Controls.MapViews
             {
                 ptTran.Y = (int)Math.Ceiling((viewPort.Height - size.Height) / 2);
             }
-
+            e.Graphics.FillEllipse(Brushes.Red, new Rectangle(new Point((int)(-3 / Zoom), (int)(-3 / Zoom)), new Size((int)(10 / Zoom), (int)(10 / Zoom))));
+            Rectangle contentRect = new Rectangle(Point.Empty, new Size((int)(size.Width / Zoom), (int)(size.Height / Zoom)));
+            contentRect.Inflate(-3, -3);
+            e.Graphics.DrawRectangle(Pens.Blue, contentRect);
+            Rectangle viewPortRect = new Rectangle(new Point((int)(viewPort.Location.X / Zoom), (int)(viewPort.Location.Y / Zoom)), new Size((int)(viewPort.Width / Zoom), (int)(viewPort.Height / Zoom)));
+            viewPortRect.Inflate(-4, -4);
+            e.Graphics.DrawRectangle(Pens.Green, viewPortRect);
             if (!ptTran.IsEmpty && Zoom > 0)
             {
                 e.Graphics.TranslateTransform(ptTran.X / Zoom, ptTran.Y / Zoom);
@@ -70,6 +76,14 @@ namespace Blumind.Controls.MapViews
 
             if (Render != null && Map != null)
             {
+                e.Graphics.FillEllipse(Brushes.Black, new Rectangle(new Point((int)(-3 / Zoom), (int)(-3 / Zoom)), new Size((int)(10 / Zoom), (int)(10 / Zoom))));
+                contentRect = new Rectangle(Point.Empty, new Size((int)(size.Width / Zoom), (int)(size.Height / Zoom)));
+                contentRect.Inflate(-5, -5);
+                e.Graphics.DrawRectangle(Pens.Black, contentRect);
+                viewPortRect = new Rectangle(new Point((int)(viewPort.Location.X / Zoom), (int)(viewPort.Location.Y / Zoom)), new Size((int)(viewPort.Width / Zoom), (int)(viewPort.Height / Zoom)));
+                viewPortRect.Inflate(-6, -6);
+                e.Graphics.DrawRectangle(Pens.Red, viewPortRect);
+
                 RenderArgs args = new RenderArgs(RenderMode.UserInface, e.Graphics, this, e.Font);
                 Render.Paint(Map, args);
             }

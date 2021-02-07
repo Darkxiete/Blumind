@@ -25,6 +25,7 @@ namespace Blumind.Core
         public static readonly DocumentType Txt;
         public static readonly DocumentType Csv;
         public static readonly DocumentType FreeMind;
+        public static readonly DocumentType Xmind;
         public static readonly DocumentType Blumind;
         public static readonly DocumentType Pdf;
 
@@ -63,6 +64,9 @@ namespace Blumind.Core
             FreeMind = new DocumentType("FreeMind", 
                 "application/freemind",
                 new string[] { ".mm" });
+            Xmind = new DocumentType("Xmind",
+                "application/Xmind",
+                new string[] { ".xmind" });
             Blumind = new DocumentType("Blumind",
                 "application/blumind",
                 new string[] { Document.Extension });

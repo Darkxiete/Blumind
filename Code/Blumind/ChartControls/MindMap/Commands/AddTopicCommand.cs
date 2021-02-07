@@ -54,6 +54,15 @@ namespace Blumind.Controls.MapViews
             return true;
         }
 
+        /// <summary>
+        ///  关于UndoRedo
+        ///  1. 第一段代码是否是禁止成环？如果是那问题解决了吗？
+        ///  2. Index是什么？似乎是某种子节点的计数
+        ///  3. 左右两边以此插入的话，那算子是如何存储的呢？以什么顺序存储？
+        ///     3.1 子节点以数组的形式存在，XList<Topic> Children
+        ///     3.2 节点首次插入使用Add，后续的插入使用Insert
+        /// </summary>
+        /// <returns></returns>
         public override bool Execute()
         {
             foreach (var st in SubTopics)
@@ -61,7 +70,7 @@ namespace Blumind.Controls.MapViews
                 if (ParentTopic == st || st.IsDescent(ParentTopic))
                     return false;
             }
-
+            
             if (Index >= 0 && Index < ParentTopic.Children.Count)
             {
                 var index = Index;

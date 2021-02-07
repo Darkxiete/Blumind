@@ -76,7 +76,7 @@ namespace Blumind.Controls.MapViews
                     {
                         foreach (var co in DragObjects)
                         {
-                            co.Parent = Target;
+                            co.Parent = Target;  // 利用ChartObject.set方法在Parent的Children里Add子节点
                         }
                         AfterSelection = DragObjects;
                         return true;

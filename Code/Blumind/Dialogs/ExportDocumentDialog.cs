@@ -163,7 +163,8 @@ namespace Blumind.Dialogs
                     miExport.Text = dt.Name;
                     if (!string.IsNullOrEmpty(dt.Description))
                         miExport.ToolTipText = Lang._(dt.Description);
-                    miExport.Image = dt.Icon;// IconExtractor.ExtractLargeIconByExtension(dt.DefaultExtension);
+                    //miExport.Image = dt.Icon;// IconExtractor.ExtractLargeIconByExtension(dt.DefaultExtension);
+                    miExport.Image = Properties.Resources.arrow_move;// IconExtractor.ExtractLargeIconByExtension(dt.DefaultExtension);
                     miExport.Tag = dt;
                     listBoxEx1.Items.Add(miExport);
                 }

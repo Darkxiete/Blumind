@@ -616,7 +616,7 @@ namespace Blumind.Model.MindMaps
         #endregion
 
         #region paint
-        public event InvalidateEventHandler Invalidated;
+        public event InvalidateEventHandler Invalidated;  // Invalidated: 控件的显示要求重新绘制时发生。
 
         public void Invalidate()
         {
